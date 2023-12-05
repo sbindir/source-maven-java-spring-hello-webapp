@@ -17,6 +17,11 @@ pipeline {
         sh 'mvn clean package'
       }
     }
+    stage('Test') {
+      steps {
+        sh 'mvn test'
+      }
+    }
     stage('Deploy') {
       steps {
         deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', url: 'http://13.124.249.140:8080/')], contextPath: null, war: 'target/hello-world.war'
