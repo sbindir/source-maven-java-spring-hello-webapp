@@ -28,7 +28,6 @@ pipeline {
       agent any
       steps {
         sh 'docker image build -t myhello .'
-'
       }
     }
     stage('Tag Docker Image') {
