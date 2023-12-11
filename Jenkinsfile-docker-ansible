@@ -48,7 +48,6 @@ pipeline {
     }
     stage('Run Docker Container') {
       agent {
-      agent {
         docker { 
           image 'sbindir/jenkins-ansible'
           args '-u 0:0 -e DOCKER_HOST=tcp://172.31.27.234:2375'
@@ -56,7 +55,6 @@ pipeline {
       }
       steps {
         ansiblePlaybook(playbook: 'docker-container-deploy.yaml')
-      }
       }
     }
   }
