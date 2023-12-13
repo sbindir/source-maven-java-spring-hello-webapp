@@ -63,12 +63,12 @@ spec:
     stage('Update K8s Manifests & Push') {
       environment {
         githubUser = 'sbkim' //Ryan Jang
-        githubEmail = 'ssubn.k@gmail.com' //c1t1d0s7@example.com
+        githubEmail = 'admin@example.com' //c1t1d0s7@example.com
         githubId = 'sbindir' //c1t1d0s7 
         githubRepo = 'jenkins-k8s-argo' //jenkins-kube-deploy
-        githubURL = "https://github.com/sbindir/jenkins-k8s-argo.git"
+        githubURL = "https://github.com/${githubId}/${githubRepo}.git"
         dockerhubId = 'sbindir' //c1t1d0s7
-        dockerhubRepo = 'hello-world' //hello-world
+        dockerhubRepo = 'myhello' //hello-world
       }
       steps {
         container('git') {
