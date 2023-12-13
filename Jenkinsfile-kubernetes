@@ -1,6 +1,7 @@
 pipeline {
   agent {
     kubernetes {
+      ///yamlFile "jenkins-agent-pod.yaml"
       yaml '''
 apiVersion: v1
 kind: Pod
@@ -36,6 +37,9 @@ spec:
         path: config.json
 '''
     }
+  }
+  triggers { 
+    githubPush()
   }
   stages {
     stage('Checkout') {
