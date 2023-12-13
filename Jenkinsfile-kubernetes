@@ -68,7 +68,7 @@ spec:
         githubRepo = 'jenkins-k8s-argo' //jenkins-kube-deploy
         githubURL = "https://github.com/sbindir/jenkins-k8s-argo.git"
         dockerhubId = 'sbindir' //c1t1d0s7
-        dockerhubRepo = 'cicd-hello-world' //hello-world
+        dockerhubRepo = 'hello-world' //hello-world
       }
       steps {
         container('git') {
