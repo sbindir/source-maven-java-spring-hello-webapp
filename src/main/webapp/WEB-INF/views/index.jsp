@@ -4,7 +4,7 @@
 <title>Hello World</title>
 </head>
 <body>
-<h1>${msg} - argocd</h1>
+<h1>${msg} - argocd w/ webhook</h1>
 <h2>Today is <fmt:formatDate value="${today}" pattern="yyyy-MM-dd"/></h2>
 <h3>Version: 2.0</h3>
 </body>
